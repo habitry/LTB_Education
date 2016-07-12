@@ -5,7 +5,7 @@ title:        "Client Education Content"
 date:         2016-04-10 18:33:44 +0200
 author:       "Omar"
 category: 	  service
-habit:        client content
+habit:        client ed
 order:	      8
 tags:         tag1 tag2
 
