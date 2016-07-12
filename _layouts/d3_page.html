@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	    <title>Essentials Wheel</title>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="
+	      {% if page.excerpt %}
+	        {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
+	      {% else %}
+	        {{ site.description }}
+	      {% endif %}">
+	    <!--[if lte IE 8]><script src="{{ "/assets/js/ie/html5shiv.js" | prepend: site.baseurl }}"></script><![endif]-->
+	    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+	    <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/assets/css/ie9.css" | prepend: site.baseurl }}"><![endif]-->
+	    <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/assets/css/ie8.css" | prepend: site.baseurl }}"><![endif]-->
+	    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+		<script src="{{ "/assets/js/d3.min.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
+		<style>
+	
+		.date {
+		  font-size: small;
+		  font-style: italic;
+		  margin: 0;
+		  width: 100%;
+		  border-top: solid #eee 1px;
+		}
+
+		.breadcrumbs {
+		  font-size: small;
+		  font-family: sans-serif;
+		  width: 100%;
+		  margin: 0;
+		  padding-top: 3px;
+		  font-style: italic;
+		  border-bottom: solid #eee 1px;
+		  color: #999;
+		}
+
+		a {
+		  color: steelblue;
+		}
+
+		a:not(:hover) {
+		  text-decoration: none;
+		}
+
+		body {
+		  margin: 0 auto;
+		  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+		  line-height: 1.5em;
+		  color: #333;
+		  background: #fefefe;
+		  width: 960px;
+		  position: relative;
+		}
+
+		p {
+		  width: 720px;
+		}
+
+		h1, h2, h3 {
+		  font-weight: 300;
+		  text-rendering: optimizeLegibility;
+		}
+
+		h1 {
+		  font-size: 2.5em;
+		}
+
+		aside {
+		  font-size: small;
+		  position: absolute;
+		  right: 0;
+		  width: 180px;
+		}
+
+		aside p {
+		  width: auto;
+		}
+
+		p.cite, p.caption {
+		  color: #666;
+		}
+
+		p.caption {
+		  text-align: center;
+		  font-size: small;
+		  font-style: italic;
+		  width: auto;
+		}
+	
+		path {
+		  stroke: #000;
+		  stroke-width: 1.5;
+		  cursor: pointer;
+		}
+
+		text {
+		  font: 11px sans-serif;
+		  cursor: pointer;
+		}
+
+		h1 {
+		  text-align: center;
+		  margin: .5em 0;
+		}
+
+		.wrapper {
+		  margin-left: 120px;
+		}
+
+		blockquote {
+		  width: 720px;
+		}
+
+		p#intro {
+		  margin-left: 120px;
+		}
+
+		</style>
+	  </head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% include header.html %}
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+              {{ content }}
+
+						</div>
+					</div>
+
+		
+
+			</div>
+			
+			<script>
+			  if (top != self) top.location.replace(location);
+			</script>
+
+		{% include scripts.html %}
+
+	</body>
+</html>

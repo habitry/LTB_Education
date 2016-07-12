@@ -1,0 +1,236 @@
+///
+/// Phantom by HTML5 UP
+/// html5up.net | @n33co
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Modules */
+
+//Modules
+
+	.modules {
+		$gutter: _size(gutter);
+		$duration: 0.5s;
+		$ease: 'ease';
+
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		position: relative;
+		margin: ($gutter) ($gutter);
+		$gutter: _size(gutter) * 0.5;
+		width:100%;
+
+		article {
+			@include vendor('transition', (
+				'transform #{$duration} #{$ease}',
+				'opacity #{$duration} #{$ease}'
+			));
+			position: relative;
+			width: calc(#{(100% / 3)} - #{$gutter * 1});
+			margin: $gutter auto;
+			
+			.module__level {
+			  background: _palette(bg-accent);
+			  position: absolute;
+			  top: 20px;
+			  right: 20px;
+			  width: 45px;
+			  height: 45px;
+			  border-radius: 50%;
+			  color: #fff;
+			  text-align: center;
+			  line-height: 20px;
+			  font-weight: bold;
+			  padding-top: 10px;
+			}
+
+
+			> a {
+				@include vendor('display', 'flex');
+				@include vendor('flex-direction', 'column');
+				@include vendor('align-items', 'center');
+				@include vendor('justify-content', 'center');
+				@include vendor('transition', (
+					'background-color #{$duration} #{$ease}',
+					'transform #{$duration} #{$ease}'
+				));
+				position: relative;
+				padding: 3em 1em;
+				border-radius: _size(border-radius);
+				border-bottom:none;
+				color: _palette(fg-accent);
+				text-align: center;
+				text-decoration: none;
+				z-index: 3;
+
+				> :last-child {
+					margin: 0;
+				}
+
+				&:hover {
+					color: _palette(fg-accent) !important;
+					
+					p.cta {
+						@include vendor('transition', (
+							'max-height #{$duration} #{$ease}',
+							'opacity #{$duration} #{$ease}'
+					));
+						opacity:1;
+					}
+				}
+
+				h2 {
+					margin: 0;
+				}
+
+				.description {
+					@include vendor('transition', (
+						'max-height #{$duration} #{$ease}',
+						'opacity #{$duration} #{$ease}'
+					));
+					width: 100%;
+					max-height: 15em;
+					line-height: 1.5;
+					margin-top: 0.35em;
+					opacity: 1;
+					
+					
+					p {
+						text-transform:none;
+						font-size:.85em;
+						margin-bottom:0px;
+					}
+					
+					.cta {
+						@include vendor('transition', (
+							'max-height #{$duration} #{$ease}',
+							'opacity #{$duration} #{$ease}'
+					));
+						font-size:.5em;
+						opacity:0;
+						margin-top:2em;
+					}
+
+					> :last-child {
+						margin-bottom: -2em;
+					}
+				}
+			}
+
+			&.style1  {
+					background-color: _palette(accent1);
+				}
+
+			&.style2 {
+					background-color:darken(_palette(accent1), 10%);
+				}
+
+			&.style3 {
+					background-color:darken(_palette(accent1), 20%);
+				}
+
+			&.style4 {
+					background-color: _palette(accent4);
+				}
+
+			&.style5 {
+					background-color: _palette(accent5);
+				}
+
+			&.style6 {
+					background-color: _palette(accent6);
+				}
+
+			body:not(.is-touch) & {
+				&:hover {
+					> .image {
+						@include vendor('transform', 'scale(1.05)');
+
+						&:before {
+							background-color: _palette(bg-accent);
+							opacity: 0.35;
+						}
+
+						&:after {
+							opacity: 0;
+						}
+					}
+
+				/*	.description {
+						max-height: 15em;
+						opacity: 1;
+					} */
+				}
+			}
+		}
+
+		* + & {
+			margin-top: _size(element-margin);
+		}
+
+		body.is-loading & {
+			article {
+				@include vendor('transform', 'scale(0.9)');
+				opacity: 0;
+			}
+		}
+
+		body.is-touch & {
+			article {
+				.content {
+					max-height: 15em;
+					opacity: 1;
+				}
+			}
+		}
+
+		@include breakpoint(large) {
+			$gutter: _size(gutter) * 0.5;
+
+			margin: ($gutter) ($gutter);
+
+			article {
+				width: calc(#{(100% / 3)} - #{$gutter * 1});
+				margin: $gutter auto;
+			}
+		}
+
+		@include breakpoint(medium) {
+			$gutter: _size(gutter);
+
+			margin: 0;
+
+			article {
+				width: calc(#{(100% / 2)} - #{$gutter * 1});
+				margin: ($gutter - 1) 0 0 ($gutter -1);
+			}
+		}
+
+		@include breakpoint(small) {
+			$gutter: _size(gutter) * 0.5;
+
+			margin: 0 $gutter 0 0;
+
+			article {
+				width: calc(#{(100% / 2)} - #{$gutter * 1});
+				margin: $gutter 0 0 $gutter;
+
+				&:hover {
+					> .image {
+						@include vendor('transform', 'scale(1.0)');
+					}
+				}
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			$gutter: _size(gutter) * 0.5;
+
+			margin: $gutter;
+
+			article {
+				width: 100%;
+				margin: $gutter 0 0 0;
+			}
+		}
+	}

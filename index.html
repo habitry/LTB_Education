@@ -1,0 +1,163 @@
+---
+layout: default
+title: "Home"
+order: 1
+description: >
+  The best introduction to practicing Motivation Science for coaching professionals on the planet.
+---
+<header>
+	<div class="inner">
+	<h2 class="big_fancy">{{ site.description }}</h2>
+</div>
+
+</header>
+<h2 style="text-align:center;">Introductions</h2>
+ <section class="tiles">
+
+{% assign items = site.intros | sort: 'order' %}
+  {% for item in items %}
+      <article class="{{ item.class }}">
+        <span class="image">
+          <img src="{{ item.list-image | prepend: site.baseurl }}" alt="">
+        </span>
+        <a href="{{ item.link }}" title="{{ item.title }}">
+          <h2>{{ item.title }}</h2>
+          <div class="content">
+            <p>{{ item.description }}</p>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+
+</section> 
+
+
+<section class="middle_section">
+<h2 style="text-align:center;"><i class="little_fancy">Habits of</i> Business</h2>
+
+ <div class="cards">
+	 
+  {% assign habits = site.habits | sort: 'order' %}	 
+	 {% for habit in habits %}
+	 {% if habit.category == "business" %}
+     <div class=" card [ is-collapsed ] ">
+       <div class="card__inner [ js-expander ]">
+         <h2>{{ habit.title }}</h2>
+         <div class="content">
+           <p>{{ habit.description }}</p>
+         </div>
+       </div>
+       <div class="card__expander">
+         <i class="fa fa-close [ js-collapser ]"></i>
+		 <div class="modules">
+       {% for module in site.modules %}
+  	 {% if module.habit == habit.habit %}
+      <article class="{{ module.class }}">
+		  <div class="module__level">{{ module.difficulty }}</div>
+		  <a href="#" title="{{ module.title }}">
+     <!--   <a href="{{ module.url | prepend: site.baseurl }}" title="{{ module.title }}"> -->
+     <!--     <h2>{{ module.title }}</h2> -->
+          <div class="description">
+            <p>{{ module.description }}</p>
+			<p class="cta">Learn More</p>
+		</div>
+        </a>
+      </article>
+	 	 {% endif %}
+       {% endfor %}
+   </div>
+       </div>
+     </div>
+	 {% endif %}
+	 {% endfor %}
+
+  
+  </div>
+</section>
+
+
+<section class="middle_section">
+<h2 style="text-align:center;"><i class="little_fancy">Habits of</i> Continual Professional Development</h2>
+
+ <div class="cards">
+
+  {% assign habits = site.habits | sort: 'order' %}	 
+	 {% for habit in habits %}
+	 {% if habit.category == "development" %}
+     <div class=" card [ is-collapsed ] ">
+       <div class="card__inner [ js-expander ]">
+         <h2>{{ habit.title }}</h2>
+         <div class="content">
+           <p>{{ habit.description }}</p>
+         </div>
+       </div>
+       <div class="card__expander">
+         <i class="fa fa-close [ js-collapser ]"></i>
+		 <div class="modules">
+       {% for module in site.modules %}
+  	 {% if module.habit == habit.habit %}
+      <article class="{{ module.class }}">
+		  <div class="module__level">{{ module.difficulty }}</div>
+		   <a href="#" title="{{ module.title }}">
+       <!-- <a href="{{ module.url | prepend: site.baseurl }}" title="{{ module.title }}"> -->
+     <!--     <h2>{{ module.title }}</h2> -->
+          <div class="description">
+            <p>{{ module.description }}</p>
+			<p class="cta">Learn More</p>
+		</div>
+        </a>
+      </article>
+	 	 {% endif %}
+       {% endfor %}
+   </div>
+       </div>
+     </div>
+	 {% endif %}
+	 {% endfor %}
+
+  
+  </div>
+</section>
+
+<section class="middle_section">
+<h2 style="text-align:center;"><i class="little_fancy">Habits of</i> Service Quality</h2>
+
+ <div class="cards">
+	 
+  {% assign habits = site.habits | sort: 'order' %}	 
+	 {% for habit in habits %}
+	 {% if habit.category == "service" %}
+     <div class=" card [ is-collapsed ] ">
+       <div class="card__inner [ js-expander ]">
+         <h2>{{ habit.title }}</h2>
+         <div class="content">
+           <p>{{ habit.description }}</p>
+         </div>
+       </div>
+       <div class="card__expander">
+         <i class="fa fa-close [ js-collapser ]"></i>
+		 <div class="modules">
+       {% for module in site.modules %}
+  	 {% if module.habit == habit.habit %}
+      <article class="{{ module.class }}">
+		  <div class="module__level">{{ module.difficulty }}</div>
+		   <a href="#" title="{{ module.title }}">
+     <!-- <a href="{{ module.url | prepend: site.baseurl }}" title="{{ module.title }}"> -->
+     <!--     <h2>{{ module.title }}</h2> -->
+          <div class="description">
+            <p>{{ module.description }}</p>
+			<p class="cta">Learn More</p>
+		</div>
+        </a>
+      </article>
+	 	 {% endif %}
+       {% endfor %}
+   </div>
+       </div>
+     </div>
+	 {% endif %}
+	 {% endfor %}
+
+  
+  </div>
+</section>
