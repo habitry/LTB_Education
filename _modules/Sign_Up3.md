@@ -1,18 +1,18 @@
 ---
 collection:   modules
 layout:       default
-title:        "Connection II"
+title:        "Improving Sign Up III"
 date:         2016-04-10 18:33:44 +0200
 author:       "Omar"
-habit: 	  	   Connection
-difficulty:	  2
+habit: 	  	   improving sign up
+difficulty:	  3
 tags:         tag1 tag2
 
 # MODULE LIST
-class:       "style2"                         # config bg-color to post list card (1..6)
+class:       "style3"                         # config bg-color to post list card (1..6)
 list-image:  "/assets/images/pic06.jpg"       # config image to post list card (1..6)
 description: >                                # config description to post list card
-   Ask for tips and tricks.
+   Writing Improving Sign Up Level 3.
   
 # MODULE HEADER
 header-image: "/assets/images/pic13.jpg"      # config image to post header

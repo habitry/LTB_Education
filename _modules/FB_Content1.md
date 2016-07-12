@@ -1,18 +1,18 @@
 ---
 collection:   modules
 layout:       default
-title:        "Connection III"
+title:        "FB Content I"
 date:         2016-04-10 18:33:44 +0200
 author:       "Omar"
-habit: 	  	   Connection
-difficulty:	  3
+habit: 	  	   FB content
+difficulty:	  1
 tags:         tag1 tag2
 
 # MODULE LIST
-class:       "style3"                         # config bg-color to post list card (1..6)
+class:       "style1"                         # config bg-color to post list card (1..6)
 list-image:  "/assets/images/pic06.jpg"       # config image to post list card (1..6)
 description: >                                # config description to post list card
-   Introduce your clients to each other.
+   Writing FB Content Level 1.
   
 # MODULE HEADER
 header-image: "/assets/images/pic13.jpg"      # config image to post header

@@ -1,19 +1,18 @@
 ---
-collection:   habits
+collection:   modules
 layout:       default
-title:        "Writing Daily Facebook Content"
+title:        "Lead Gen II"
 date:         2016-04-10 18:33:44 +0200
-author:       "Gregg"
-category: 	  business
-habit:        FB content
-order:	      1
+author:       "Omar"
+habit: 	  	   lead gen
+difficulty:	  2
 tags:         tag1 tag2
 
 # MODULE LIST
-class:       "style1"                         # config bg-color to post list card (1..6)
+class:       "style2"                         # config bg-color to post list card (1..6)
 list-image:  "/assets/images/pic06.jpg"       # config image to post list card (1..6)
 description: >                                # config description to post list card
-  FPO on Why Writing Daily FB Content and schedule is important
+   Lead Gen Level 2.
   
 # MODULE HEADER
 header-image: "/assets/images/pic13.jpg"      # config image to post header
