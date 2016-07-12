@@ -9,7 +9,7 @@
 title: Lift the Bar Education
 description: > # this means to ignore newlines until "baseurl:"
   A Habit-Based, Personal Trainer Education.
-baseurl: "/ltb" # the subpath of your site, e.g. /blog
+baseurl: "/LTB_Education" # the subpath of your site, e.g. /blog
 url: "https://habitry.github.io" # the base hostname & protocol for your site
 
 # Collections
